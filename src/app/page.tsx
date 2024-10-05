@@ -1,17 +1,9 @@
 'use client'
 
-import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { ChevronDown, Mail, Linkedin, Instagram } from 'lucide-react'
 
 export default function Component() {
-  const [isVideoLoaded, setIsVideoLoaded] = useState(false)
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsVideoLoaded(true), 1000)
-    return () => clearTimeout(timer)
-  }, [])
-
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       {/* Hero Section */}
@@ -22,7 +14,6 @@ export default function Component() {
           muted
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
-          onLoadedData={() => setIsVideoLoaded(true)}
         >
           <source src="/placeholder.mp4" type="video/mp4" />
           Your browser does not support the video tag.
@@ -62,7 +53,6 @@ export default function Component() {
           <ChevronDown className="w-8 h-8 animate-bounce" />
         </motion.div>
       </section>
-
       {/* Past Experience Section */}
       <section className="py-16 px-4 md:px-8 bg-gray-800">
         <div className="max-w-4xl mx-auto">
