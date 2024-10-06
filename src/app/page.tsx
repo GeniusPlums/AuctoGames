@@ -14,15 +14,36 @@ export default function FantasySportsComponent() {
   });
   const [formStatus, setFormStatus] = useState('');
   const form = useRef<HTMLFormElement>(null);
+  const [isVideoReady, setIsVideoReady] = useState(false);
+  
 
   useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.muted = false;
-      videoRef.current.play().catch(error => {
-        console.log("Autoplay was prevented:", error);
-      });
+    const video = videoRef.current;
+    if (video) {
+      video.muted = false;
+      video.playsInline = true;
+      video.loop = true;
+
+      const playVideo = () => {
+        video.play().catch(error => {
+          console.log("Autoplay was prevented:", error);
+        });
+      };
+
+      if (isVideoReady) {
+        playVideo();
+      } else {
+        video.addEventListener('canplaythrough', () => {
+          setIsVideoReady(true);
+          playVideo();
+        });
+      }
+
+      return () => {
+        video.removeEventListener('canplaythrough', playVideo);
+      };
     }
-  }, []);
+  }, [isVideoReady]);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
