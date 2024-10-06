@@ -14,8 +14,6 @@ export default function FantasySportsComponent() {
   });
   const [formStatus, setFormStatus] = useState('');
   const form = useRef<HTMLFormElement>(null);
-  const [isVideoReady, setIsVideoReady] = useState(false);
-  
 
   useEffect(() => {
     const video = videoRef.current;
@@ -27,23 +25,26 @@ export default function FantasySportsComponent() {
       const playVideo = () => {
         video.play().catch(error => {
           console.log("Autoplay was prevented:", error);
+          // If autoplay is prevented, try muting the video and playing again
+          video.muted = true;
+          video.play().catch(e => console.log("Autoplay still prevented:", e));
         });
       };
 
-      if (isVideoReady) {
-        playVideo();
-      } else {
-        video.addEventListener('canplaythrough', () => {
-          setIsVideoReady(true);
-          playVideo();
-        });
-      }
+      playVideo();
+
+      // Add event listener for user interaction to unmute if necessary
+      const unmute = () => {
+        video.muted = false;
+        document.removeEventListener('click', unmute);
+      };
+      document.addEventListener('click', unmute);
 
       return () => {
-        video.removeEventListener('canplaythrough', playVideo);
+        document.removeEventListener('click', unmute);
       };
     }
-  }, [isVideoReady]);
+  }, []);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -84,9 +85,8 @@ export default function FantasySportsComponent() {
       <section className="relative h-screen overflow-hidden">
         <video
           ref={videoRef}
-          autoPlay
-          loop
           playsInline
+          loop
           className="absolute inset-0 w-full h-full object-cover"
         >
           <source src="/placeholder.mp4" type="video/mp4" />
@@ -125,18 +125,18 @@ export default function FantasySportsComponent() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">Past Experience</h2>
           <p className="text-lg mb-8">
-            Our fantasy sports platform has been at the forefront of the industry, providing innovative and engaging experiences for users. We&apos;ve successfully collaborated with top college fests across the country, showcasing our game to potential users and building strong partnerships within the gaming community.
+            Our fantasy sports platform has been at the forefront of the industry, providing innovative and engaging experiences for users. We've successfully collaborated with top college fests across the country, showcasing our game to potential users and building strong partnerships within the gaming community.
           </p>
           <h3 className="text-2xl font-bold mb-4">Key Achievements:</h3>
           <ul className="list-disc list-inside space-y-4 mb-8">
             <li className="text-lg">
-              <span className="font-bold">Massive User Base:</span> We&apos;ve garnered a loyal community of over 1000+ users who have consistently engaged with our platform.
+              <span className="font-bold">Massive User Base:</span> We've garnered a loyal community of over 1000+ users who have consistently engaged with our platform.
             </li>
             <li className="text-lg">
               <span className="font-bold">Successful Collaborations:</span> Our partnerships with renowned college fests have allowed us to reach a wider audience and generate significant buzz around our app. These collaborations have been instrumental in establishing our brand in the fantasy sports space.
             </li>
             <li className="text-lg">
-              <span className="font-bold">Innovative Features:</span> Our app boasts a range of unique features that set us apart from competitors. From our advanced mechanics to our real-time data analysis, we&apos;ve strived to provide a superior user experience.
+              <span className="font-bold">Innovative Features:</span> Our app boasts a range of unique features that set us apart from competitors. From our advanced mechanics to our real-time data analysis, we've strived to provide a superior user experience.
             </li>
           </ul>
         </div>
