@@ -3,10 +3,18 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronDown, Mail, Linkedin, Instagram } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 export default function Component() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+  const [formStatus, setFormStatus] = useState('');
+  const form = useRef<HTMLFormElement>(null);
 
   useEffect(() => {
     if (videoRef.current) {
@@ -25,6 +33,39 @@ export default function Component() {
       videoRef.current.play();
       setIsPlaying(true);
     }
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prevData => ({
+      ...prevData,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setFormStatus('Sending...');
+
+    if (!formData.name || !formData.email || !formData.message) {
+      setFormStatus('Please fill in all fields.');
+      return;
+    }
+
+    emailjs.sendForm(
+      'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
+      'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+      form.current!,
+      'YOUR_PUBLIC_KEY' // Replace with your EmailJS public key
+    )
+      .then((result) => {
+        console.log(result.text);
+        setFormStatus('Message sent successfully!');
+        setFormData({ name: '', email: '', message: '' });
+      }, (error) => {
+        console.log(error.text);
+        setFormStatus('Failed to send message. Please try again.');
+      });
   };
 
   return (
@@ -115,6 +156,9 @@ export default function Component() {
           <p className="text-xl mb-8">
             Experience the future of fantasy sports with our cutting-edge platform. Join our growing community and discover the excitement of competitive gaming.
           </p>
+          <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 text-lg">
+            Sign Up Now
+          </button>
         </div>
       </section>
 
@@ -169,25 +213,39 @@ export default function Component() {
               </motion.div>
             </div>
             <motion.form
+              ref={form}
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
               className="space-y-4"
+              onSubmit={handleSubmit}
             >
               <input
                 type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleInputChange}
                 placeholder="Your Name"
                 className="w-full p-2 bg-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                required
               />
               <input
                 type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleInputChange}
                 placeholder="Your Email"
                 className="w-full p-2 bg-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                required
               />
               <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleInputChange}
                 placeholder="Your Message"
                 rows={4}
                 className="w-full p-2 bg-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                required
               ></textarea>
               <button
                 type="submit"
@@ -195,6 +253,11 @@ export default function Component() {
               >
                 Send Message
               </button>
+              {formStatus && (
+                <p className={`text-center ${formStatus.includes('successfully') ? 'text-green-500' : 'text-red-500'}`}>
+                  {formStatus}
+                </p>
+              )}
             </motion.form>
           </div>
         </div>
