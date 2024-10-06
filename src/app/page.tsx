@@ -115,9 +115,6 @@ export default function Component() {
           <p className="text-xl mb-8">
             Experience the future of fantasy sports with our cutting-edge platform. Join our growing community and discover the excitement of competitive gaming.
           </p>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 text-lg">
-            Sign Up Now
-          </button>
         </div>
       </section>
 
