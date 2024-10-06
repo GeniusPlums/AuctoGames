@@ -7,7 +7,6 @@ import emailjs from '@emailjs/browser';
 
 export default function FantasySportsComponent() {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -19,21 +18,11 @@ export default function FantasySportsComponent() {
   useEffect(() => {
     if (videoRef.current) {
       videoRef.current.muted = false;
-      videoRef.current.play().then(() => {
-        setIsPlaying(true);
-      }).catch(error => {
+      videoRef.current.play().catch(error => {
         console.log("Autoplay was prevented:", error);
-        setIsPlaying(false);
       });
     }
   }, []);
-
-  const handlePlayClick = () => {
-    if (videoRef.current) {
-      videoRef.current.play();
-      setIsPlaying(true);
-    }
-  };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -78,19 +67,10 @@ export default function FantasySportsComponent() {
           loop
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
-          controls
         >
           <source src="/placeholder.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        {!isPlaying && (
-          <button
-            onClick={handlePlayClick}
-            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full transition duration-300"
-          >
-            Play Video
-          </button>
-        )}
         <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center p-4">
           <motion.h1
             initial={{ opacity: 0, y: -50 }}
@@ -108,14 +88,6 @@ export default function FantasySportsComponent() {
           >
             Join the future of competitive gaming
           </motion.p>
-          <motion.button
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 1.5 }}
-            className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full transition duration-300"
-          >
-            Get Started
-          </motion.button>
         </div>
         <motion.div
           initial={{ opacity: 0 }}
