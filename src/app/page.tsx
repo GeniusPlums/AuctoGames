@@ -125,18 +125,18 @@ export default function FantasySportsComponent() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">Past Experience</h2>
           <p className="text-lg mb-8">
-            Our fantasy sports platform has been at the forefront of the industry, providing innovative and engaging experiences for users. We've successfully collaborated with top college fests across the country, showcasing our game to potential users and building strong partnerships within the gaming community.
+            Our fantasy sports platform has been at the forefront of the industry, providing innovative and engaging experiences for users. We&apos;ve successfully collaborated with top college fests across the country, showcasing our game to potential users and building strong partnerships within the gaming community.
           </p>
           <h3 className="text-2xl font-bold mb-4">Key Achievements:</h3>
           <ul className="list-disc list-inside space-y-4 mb-8">
             <li className="text-lg">
-              <span className="font-bold">Massive User Base:</span> We've garnered a loyal community of over 1000+ users who have consistently engaged with our platform.
+              <span className="font-bold">Massive User Base:</span> We&apos;ve garnered a loyal community of over 1000+ users who have consistently engaged with our platform.
             </li>
             <li className="text-lg">
               <span className="font-bold">Successful Collaborations:</span> Our partnerships with renowned college fests have allowed us to reach a wider audience and generate significant buzz around our app. These collaborations have been instrumental in establishing our brand in the fantasy sports space.
             </li>
             <li className="text-lg">
-              <span className="font-bold">Innovative Features:</span> Our app boasts a range of unique features that set us apart from competitors. From our advanced mechanics to our real-time data analysis, we've strived to provide a superior user experience.
+              <span className="font-bold">Innovative Features:</span> Our app boasts a range of unique features that set us apart from competitors. From our advanced mechanics to our real-time data analysis, we&apos;ve strived to provide a superior user experience.
             </li>
           </ul>
         </div>
