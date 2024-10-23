@@ -120,38 +120,102 @@ export default function FantasySportsComponent() {
         </motion.div>
       </section>
 
-      {/* Past Experience Section */}
+      {/* Homepage Section */}
       <section className="py-16 px-4 md:px-8 bg-gray-800">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">Past Experience</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">Welcome to AuctoGames</h2>
           <p className="text-lg mb-8">
-            Our fantasy sports platform has been at the forefront of the industry, providing innovative and engaging experiences for users. We&apos;ve successfully collaborated with top college fests across the country, showcasing our game to potential users and building strong partnerships within the gaming community.
+            The Ultimate Fantasy IPL Auction Experience
           </p>
-          <h3 className="text-2xl font-bold mb-4">Key Achievements:</h3>
+          <p className="text-lg mb-8">
+            At AuctoGames, we bring the thrill of fantasy sports and the excitement of IPL auctions together in one platform. Whether you're a seasoned fantasy gamer or a cricket enthusiast, our real-time player bidding system allows you to create your dream team and compete with friends in a fun and engaging environment.
+          </p>
+          <h3 className="text-2xl font-bold mb-4">Play the Auction. Build Your Team.</h3>
+          <h4 className="text-xl font-bold mb-4">Why AuctoGames?</h4>
           <ul className="list-disc list-inside space-y-4 mb-8">
-            <li className="text-lg">
-              <span className="font-bold">Massive User Base:</span> We&apos;ve garnered a loyal community of over 1000+ users who have consistently engaged with our platform.
-            </li>
-            <li className="text-lg">
-              <span className="font-bold">Successful Collaborations:</span> Our partnerships with renowned college fests have allowed us to reach a wider audience and generate significant buzz around our app. These collaborations have been instrumental in establishing our brand in the fantasy sports space.
-            </li>
-            <li className="text-lg">
-              <span className="font-bold">Innovative Features:</span> Our app boasts a range of unique features that set us apart from competitors. From our advanced mechanics to our real-time data analysis, we&apos;ve strived to provide a superior user experience.
-            </li>
+            <li>Real-Time Player Auctions: Experience live bidding just like an IPL auction.</li>
+            <li>Fantasy Gaming Redefined: Strategize, bid, and manage your team throughout the tournament.</li>
+            <li>Compete with Friends: Challenge your friends in private leagues or join public ones to prove your skills.</li>
+          </ul>
+          <a
+            href="https://forms.gle/NZtkCaHDNb5Eq7BW8"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 text-lg"
+          >
+            Sign Up Now
+          </a>
+        </div>
+      </section>
+      {/* About Us Section */}
+      <section className="py-16 px-4 md:px-8 bg-gray-900">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">About Us</h2>
+          <p className="text-lg mb-8">
+            AuctoGames is an innovative fantasy sports platform designed to bring IPL auctions to life. We've created a space where cricket fans and gamers alike can experience the excitement of bidding on players and managing teams in a real-time auction format.
+          </p>
+          <p className="text-lg mb-8">
+            With 300+ successful events, 3,000+ happy gamers, and over ₹5 lakhs in revenue as proof of concept, AuctoGames is ready to revolutionize the fantasy sports landscape.
+          </p>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-16 px-4 md:px-8 bg-gray-800">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">Features</h2>
+          <ul className="list-disc list-inside space-y-4 mb-8">
+            <li>Live Auctioning: Feel the adrenaline of competing in real-time auctions.</li>
+            <li>Private Leagues: Play with your friends in custom leagues.</li>
+            <li>Real-Time Updates: Stay on top of your players' performance with live updates.</li>
+            <li>Seamless User Experience: Enjoy intuitive gameplay on both web and mobile platforms.</li>
+            <li>Interactive Video Calls: Chat with friends during live auctions, making the experience even more fun.</li>
           </ul>
         </div>
       </section>
 
-      {/* Join the Revolution Section */}
+       {/* Why AuctoGames Section */}
+       <section className="py-16 px-4 md:px-8 bg-gray-900">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">Why AuctoGames?</h2>
+          <ul className="list-disc list-inside space-y-4 mb-8">
+            <li>Explosive Market Potential: Did you know that 18 crore Indians play fantasy esports, while only 16 crore invest in the stock market?</li>
+            <li>Innovative Fantasy Sports: We blend the excitement of IPL auctions with strategic fantasy gaming.</li>
+            <li>Proven Success: We've already hosted 300+ events and generated over ₹5 lakhs in revenue with more to come!</li>
+          </ul>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-16 px-4 md:px-8 bg-gray-800">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">Testimonials</h2>
+          <div className="space-y-8">
+            <blockquote className="italic">
+              "AuctoGames takes the fantasy cricket experience to the next level! The auctions are thrilling, and the competition with friends is amazing." – Gitansh G.
+            </blockquote>
+            <blockquote className="italic">
+              "I've played fantasy games before, but AuctoGames makes it so much more engaging with the live bidding. Love it!" – Abhay J.
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      {/* Join the Action Section */}
       <section className="py-16 px-4 md:px-8 bg-gray-900 text-center">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8">Join the Revolution</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-8">Join the Action</h2>
           <p className="text-xl mb-8">
-            Experience the future of fantasy sports with our cutting-edge platform. Join our growing community and discover the excitement of competitive gaming.
+            Ready to experience the thrill of IPL auctions? Sign up and start playing with your friends or challenge new players across the platform. Build your dream team and prove your skills in the world of fantasy cricket.
           </p>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 text-lg">
+          <a
+            href="https://forms.gle/NZtkCaHDNb5Eq7BW8"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 text-lg"
+          >
             Sign Up Now
-          </button>
+          </a>
         </div>
       </section>
 
