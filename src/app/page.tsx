@@ -128,7 +128,7 @@ export default function FantasySportsComponent() {
             The Ultimate Fantasy IPL Auction Experience
           </p>
           <p className="text-lg mb-8">
-            At AuctoGames, we bring the thrill of fantasy sports and the excitement of IPL auctions together in one platform. Whether you're a seasoned fantasy gamer or a cricket enthusiast, our real-time player bidding system allows you to create your dream team and compete with friends in a fun and engaging environment.
+            At AuctoGames, we bring the thrill of fantasy sports and the excitement of IPL auctions together in one platform. Whether you&apos;re a seasoned fantasy gamer or a cricket enthusiast, our real-time player bidding system allows you to create your dream team and compete with friends in a fun and engaging environment.
           </p>
           <h3 className="text-2xl font-bold mb-4">Play the Auction. Build Your Team.</h3>
           <h4 className="text-xl font-bold mb-4">Why AuctoGames?</h4>
@@ -152,7 +152,7 @@ export default function FantasySportsComponent() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">About Us</h2>
           <p className="text-lg mb-8">
-            AuctoGames is an innovative fantasy sports platform designed to bring IPL auctions to life. We've created a space where cricket fans and gamers alike can experience the excitement of bidding on players and managing teams in a real-time auction format.
+            AuctoGames is an innovative fantasy sports platform designed to bring IPL auctions to life. We&apos;ve created a space where cricket fans and gamers alike can experience the excitement of bidding on players and managing teams in a real-time auction format.
           </p>
           <p className="text-lg mb-8">
             With 300+ successful events, 3,000+ happy gamers, and over ₹5 lakhs in revenue as proof of concept, AuctoGames is ready to revolutionize the fantasy sports landscape.
@@ -192,10 +192,10 @@ export default function FantasySportsComponent() {
           <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">Testimonials</h2>
           <div className="space-y-8">
             <blockquote className="italic">
-              "AuctoGames takes the fantasy cricket experience to the next level! The auctions are thrilling, and the competition with friends is amazing." – Gitansh G.
+              &ldquo;AuctoGames takes the fantasy cricket experience to the next level! The auctions are thrilling, and the competition with friends is amazing.&rdquo; – Gitansh G.
             </blockquote>
             <blockquote className="italic">
-              "I've played fantasy games before, but AuctoGames makes it so much more engaging with the live bidding. Love it!" – Abhay J.
+              &ldquo;I&apos;ve played fantasy games before, but AuctoGames makes it so much more engaging with the live bidding. Love it!&rdquo; – Abhay J.
             </blockquote>
           </div>
         </div>
