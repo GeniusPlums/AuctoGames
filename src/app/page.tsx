@@ -131,6 +131,8 @@ export default function FantasySportsComponent() {
             At AuctoGames, we bring the thrill of fantasy sports and the excitement of IPL auctions together in one platform. Whether you&apos;re a seasoned fantasy gamer or a cricket enthusiast, our real-time player bidding system allows you to create your dream team and compete with friends in a fun and engaging environment.
           </p>
           <h3 className="text-2xl font-bold mb-4">Play the Auction. Build Your Team.</h3>
+
+          
           <h4 className="text-xl font-bold mb-4">Why AuctoGames?</h4>
           <ul className="list-disc list-inside space-y-4 mb-8">
             <li>Real-Time Player Auctions: Experience live bidding just like an IPL auction.</li>
@@ -191,12 +193,12 @@ export default function FantasySportsComponent() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">Testimonials</h2>
           <div className="space-y-8">
-            <blockquote className="italic">
-              &ldquo;AuctoGames takes the fantasy cricket experience to the next level! The auctions are thrilling, and the competition with friends is amazing.&rdquo; – Gitansh G.
-            </blockquote>
-            <blockquote className="italic">
-              &ldquo;I&apos;ve played fantasy games before, but AuctoGames makes it so much more engaging with the live bidding. Love it!&rdquo; – Abhay J.
-            </blockquote>
+          <p className="text-lg mb-8">
+            At AuctoGames, we bring the thrill of fantasy sports and the excitement of IPL auctions together in one platform. Whether you&apos;re a seasoned fantasy gamer or a cricket enthusiast, our real-time player bidding system allows you to create your dream team and compete with friends in a fun and engaging environment.
+          </p>
+          <p className="text-lg mb-8">
+            I&apos;ve played fantasy games before, but AuctoGames makes it so much more engaging with the live bidding. Love it!&rdquo; – Abhay J.
+          </p>
           </div>
         </div>
       </section>
