@@ -132,9 +132,10 @@ export default function FantasySportsComponent() {
           </p>
           <h3 className="text-2xl font-bold mb-4">Play the Auction. Build Your Team.</h3>
 
-          
+
           <h4 className="text-xl font-bold mb-4">Why AuctoGames?</h4>
           <ul className="list-disc list-inside space-y-4 mb-8">
+            <li>Real-Time Player Auctions: Experience live bidding just like an IPL auction.</li>
             <li>Fantasy Gaming Redefined: Strategize, bid, and manage your team throughout the tournament.</li>
             <li>Compete with Friends: Challenge your friends in private leagues or join public ones to prove your skills.</li>
           </ul>
@@ -168,15 +169,15 @@ export default function FantasySportsComponent() {
           <ul className="list-disc list-inside space-y-4 mb-8">
             <li>Live Auctioning: Feel the adrenaline of competing in real-time auctions.</li>
             <li>Private Leagues: Play with your friends in custom leagues.</li>
-            <li>Real-Time Updates: Stay on top of your players' performance with live updates.</li>
+            <li>Real-Time Updates: Stay on top of your players&apos; performance with live updates.</li>
             <li>Seamless User Experience: Enjoy intuitive gameplay on both web and mobile platforms.</li>
             <li>Interactive Video Calls: Chat with friends during live auctions, making the experience even more fun.</li>
           </ul>
         </div>
       </section>
 
-       {/* Why AuctoGames Section */}
-       <section className="py-16 px-4 md:px-8 bg-gray-900">
+      {/* Why AuctoGames Section */}
+      <section className="py-16 px-4 md:px-8 bg-gray-900">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">Why AuctoGames?</h2>
           <ul className="list-disc list-inside space-y-4 mb-8">
@@ -192,12 +193,12 @@ export default function FantasySportsComponent() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">Testimonials</h2>
           <div className="space-y-8">
-          <p className="text-lg mb-8">
-            At AuctoGames, we bring the thrill of fantasy sports and the excitement of IPL auctions together in one platform. Whether you&apos;re a seasoned fantasy gamer or a cricket enthusiast, our real-time player bidding system allows you to create your dream team and compete with friends in a fun and engaging environment.
-          </p>
-          <blockquote className="italic">
-              &ldquo;I&apos;ve played fantasy games before, but AuctoGames makes it so much more engaging with the live bidding. Love it!&rdquo; – Abhay J.
-            </blockquote>
+            <p className="text-lg mb-8">
+              At AuctoGames, we bring the thrill of fantasy sports and the excitement of IPL auctions together in one platform. Whether you&apos;re a seasoned fantasy gamer or a cricket enthusiast, our real-time player bidding system allows you to create your dream team and compete with friends in a fun and engaging environment.
+            </p>
+            <p className="text-lg mb-8">
+              I&apos;ve played fantasy games before, but AuctoGames makes it so much more engaging with the live bidding. Love it!&rdquo; – Abhay J.
+            </p>
           </div>
         </div>
       </section>
