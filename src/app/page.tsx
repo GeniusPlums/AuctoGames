@@ -135,7 +135,6 @@ export default function FantasySportsComponent() {
           
           <h4 className="text-xl font-bold mb-4">Why AuctoGames?</h4>
           <ul className="list-disc list-inside space-y-4 mb-8">
-            <li>Real-Time Updates: Stay on top of your players&apos; performance with live updates.</li>
             <li>Fantasy Gaming Redefined: Strategize, bid, and manage your team throughout the tournament.</li>
             <li>Compete with Friends: Challenge your friends in private leagues or join public ones to prove your skills.</li>
           </ul>
