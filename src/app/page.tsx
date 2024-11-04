@@ -183,7 +183,7 @@ export default function FantasySportsComponent() {
           <ul className="list-disc list-inside space-y-4 mb-8">
             <li>Explosive Market Potential: Did you know that 18 crore Indians play fantasy esports, while only 16 crore invest in the stock market?</li>
             <li>Innovative Fantasy Sports: We blend the excitement of IPL auctions with strategic fantasy gaming.</li>
-            <li>Proven Success: We've already hosted 300+ events and generated over ₹5 lakhs in revenue with more to come!</li>
+            <li>Proven Success: We&apos;ve already hosted 300+ events and generated over ₹5 lakhs in revenue with more to come!</li>
           </ul>
         </div>
       </section>
